@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3201FD8F1D01E8E5005F6FC7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3201FD8E1D01E8E5005F6FC7 /* OpenGL.framework */; };
+		3201FD911D01E8EA005F6FC7 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3201FD901D01E8EA005F6FC7 /* GLUT.framework */; };
+		3201FD931D01E9B6005F6FC7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3201FD921D01E9B6005F6FC7 /* main.cpp */; };
+		3201FD961D01F999005F6FC7 /* SegmentManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3201FD941D01F999005F6FC7 /* SegmentManager.cpp */; };
+		3201FD991D01FCF3005F6FC7 /* DataStructures.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3201FD971D01FCF3005F6FC7 /* DataStructures.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3201FD821D01E8CC005F6FC7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3201FD841D01E8CC005F6FC7 /* image-segmentation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "image-segmentation"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3201FD8E1D01E8E5005F6FC7 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		3201FD901D01E8EA005F6FC7 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		3201FD921D01E9B6005F6FC7 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3201FD941D01F999005F6FC7 /* SegmentManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SegmentManager.cpp; sourceTree = "<group>"; };
+		3201FD951D01F999005F6FC7 /* SegmentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentManager.h; sourceTree = "<group>"; };
+		3201FD971D01FCF3005F6FC7 /* DataStructures.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataStructures.cpp; sourceTree = "<group>"; };
+		3201FD9A1D01FD0F005F6FC7 /* DataStructures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataStructures.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3201FD811D01E8CC005F6FC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3201FD911D01E8EA005F6FC7 /* GLUT.framework in Frameworks */,
+				3201FD8F1D01E8E5005F6FC7 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3201FD7B1D01E8CC005F6FC7 = {
+			isa = PBXGroup;
+			children = (
+				3201FD901D01E8EA005F6FC7 /* GLUT.framework */,
+				3201FD8E1D01E8E5005F6FC7 /* OpenGL.framework */,
+				3201FD851D01E8CC005F6FC7 /* Products */,
+				3201FD921D01E9B6005F6FC7 /* main.cpp */,
+				3201FD941D01F999005F6FC7 /* SegmentManager.cpp */,
+				3201FD951D01F999005F6FC7 /* SegmentManager.h */,
+				3201FD971D01FCF3005F6FC7 /* DataStructures.cpp */,
+				3201FD9A1D01FD0F005F6FC7 /* DataStructures.h */,
+			);
+			sourceTree = "<group>";
+		};
+		3201FD851D01E8CC005F6FC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3201FD841D01E8CC005F6FC7 /* image-segmentation */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3201FD831D01E8CC005F6FC7 /* image-segmentation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3201FD8B1D01E8CC005F6FC7 /* Build configuration list for PBXNativeTarget "image-segmentation" */;
+			buildPhases = (
+				3201FD801D01E8CC005F6FC7 /* Sources */,
+				3201FD811D01E8CC005F6FC7 /* Frameworks */,
+				3201FD821D01E8CC005F6FC7 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "image-segmentation";
+			productName = "image-segmentation";
+			productReference = 3201FD841D01E8CC005F6FC7 /* image-segmentation */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3201FD7C1D01E8CC005F6FC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Rohan Sawhney";
+				TargetAttributes = {
+					3201FD831D01E8CC005F6FC7 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 3201FD7F1D01E8CC005F6FC7 /* Build configuration list for PBXProject "image-segmentation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3201FD7B1D01E8CC005F6FC7;
+			productRefGroup = 3201FD851D01E8CC005F6FC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3201FD831D01E8CC005F6FC7 /* image-segmentation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3201FD801D01E8CC005F6FC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3201FD991D01FCF3005F6FC7 /* DataStructures.cpp in Sources */,
+				3201FD931D01E9B6005F6FC7 /* main.cpp in Sources */,
+				3201FD961D01F999005F6FC7 /* SegmentManager.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3201FD891D01E8CC005F6FC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3201FD8A1D01E8CC005F6FC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3201FD8C1D01E8CC005F6FC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/Cellar/imagemagick/6.9.2-3/include/ImageMagick-6",
+					/usr/local/Cellar/eigen/3.2.4/include/eigen3,
+				);
+				OTHER_LDFLAGS = (
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-L/usr/local/Cellar/imagemagick/6.9.2-3/lib",
+					"-I/usr/local/Cellar/imagemagick/6.9.2-3/include/ImageMagick-6",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-I/usr/local/Cellar/imagemagick/6.9.2-3/include/ImageMagick-6",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-lMagickWand-6.Q16",
+					"-lMagick++-6.Q16",
+					"-lMagickCore-6.Q16",
+					"-L/usr/local/Cellar/imagemagick/6.9.2-3/lib",
+					"-lMagickWand-6.Q16",
+					"-lMagickCore-6.Q16",
+					"-lMagick++-6.Q16",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3201FD8D1D01E8CC005F6FC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/Cellar/imagemagick/6.9.2-3/include/ImageMagick-6",
+					/usr/local/Cellar/eigen/3.2.4/include/eigen3,
+				);
+				OTHER_LDFLAGS = (
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-L/usr/local/Cellar/imagemagick/6.9.2-3/lib",
+					"-I/usr/local/Cellar/imagemagick/6.9.2-3/include/ImageMagick-6",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-I/usr/local/Cellar/imagemagick/6.9.2-3/include/ImageMagick-6",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-DMAGICKCORE_QUANTUM_DEPTH=16",
+					"-DMAGICKCORE_HDRI_ENABLE=0",
+					"-lMagickWand-6.Q16",
+					"-lMagick++-6.Q16",
+					"-lMagickCore-6.Q16",
+					"-L/usr/local/Cellar/imagemagick/6.9.2-3/lib",
+					"-lMagickWand-6.Q16",
+					"-lMagickCore-6.Q16",
+					"-lMagick++-6.Q16",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3201FD7F1D01E8CC005F6FC7 /* Build configuration list for PBXProject "image-segmentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3201FD891D01E8CC005F6FC7 /* Debug */,
+				3201FD8A1D01E8CC005F6FC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3201FD8B1D01E8CC005F6FC7 /* Build configuration list for PBXNativeTarget "image-segmentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3201FD8C1D01E8CC005F6FC7 /* Debug */,
+				3201FD8D1D01E8CC005F6FC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3201FD7C1D01E8CC005F6FC7 /* Project object */;
+}
