@@ -5,14 +5,11 @@ Forest::Forest(const int& count)
     nodes.reserve(count);
     sets = count;
     for (int i = 0; i < sets; i++) {
-        nodes.push_back(Node());
-        nodes[i].rank = 0;
-        nodes[i].index = i;
-        nodes[i].size = 1;
+        nodes.push_back(Node(0, i, 1));
     }
 }
 
-int Forest::find(int i)
+int Forest::find(const int& i)
 {
     int j = i;
     while (j != nodes[j].index) j = nodes[j].index;
@@ -21,7 +18,7 @@ int Forest::find(int i)
     return j;
 }
 
-void Forest::join(int i, int j)
+void Forest::join(const int& i, const int& j)
 {
     if (nodes[i].rank > nodes[j].rank) {
         nodes[j].index = i;
@@ -37,7 +34,7 @@ void Forest::join(int i, int j)
     sets--;
 }
 
-int Forest::nodeSize(int i) const
+int Forest::nodeSize(const int& i) const
 {
     return nodes[i].size;
 }

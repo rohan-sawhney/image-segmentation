@@ -8,7 +8,7 @@ SegmentManager::SegmentManager()
 
 double blurWidth(const double& sigma)
 {
-    return ceil(sigma * 4) + 1;
+    return ceil(sigma*WIDTH) + 1;
 }
 
 double diff(const Image& image, const int& i1, const int& j1, const int& i2, const int& j2)
@@ -25,59 +25,22 @@ bool comparator(const Edge& e1, const Edge& e2)
 
 void buildGraph(std::vector<Edge>& edges, const Image& image)
 {
-    int e = 0;
     int w = (int)image.columns();
     int h = (int)image.rows();
-    edges.reserve(w * h * 4);
+    edges.reserve(w*h*4);
     
     for (int j = 0; j < h; j++) {
         for (int i = 0; i < w; i++) {
+            int a = j*w+i;
             
-            if (i < w-1) {
-                edges.push_back(Edge());
-                edges[e].a = j * w + i;
-                edges[e].b = j * w + i + 1;
-                edges[e].weight = diff(image, i, j, i+1, j);
-                e++;
-            }
-            
-            if (j < h-1) {
-                edges.push_back(Edge());
-                edges[e].a = j * w + i;
-                edges[e].b = (j + 1) * w + i;
-                edges[e].weight = diff(image, i, j, i, j+1);
-                e++;
-            }
-            
-            if (i < w-1 && j < h-1) {
-                edges.push_back(Edge());
-                edges[e].a = j * w + i;
-                edges[e].b = (j + 1) * w + i + 1;
-                edges[e].weight = diff(image, i, j, i+1, j+1);
-                e++;
-            }
-            
-            if (i < w-1 && j > 0) {
-                edges.push_back(Edge());
-                edges[e].a = j * w + i;
-                edges[e].b = (j - 1) * w + i + 1;
-                edges[e].weight = diff(image, i, j, i+1, j-1);
-                e++;
-            }
+            if (i < w-1) edges.push_back(Edge(a, j*w+i+1, diff(image, i, j, i+1, j)));
+            if (j < h-1) edges.push_back(Edge(a, (j+1)*w+i, diff(image, i, j, i, j+1)));
+            if (i < w-1 && j < h-1) edges.push_back(Edge(a, (j+1)*w+i+1, diff(image, i, j, i+1, j+1)));
+            if (i < w-1 && j > 0) edges.push_back(Edge(a, (j-1)*w+i+1, diff(image, i, j, i+1, j-1)));
         }
     }
     
     std::sort(edges.begin(), edges.end(), comparator);
-}
-
-double avgWeight(std::vector<Edge>& edges)
-{
-    double w = 0;
-    for (size_t i = 0; i < edges.size(); i++) {
-        w += edges[i].weight;
-    }
-    
-    return w / edges.size();
 }
 
 void segmentGraph(Forest& forest, std::vector<Edge>& edges, const double& k)
@@ -93,7 +56,7 @@ void segmentGraph(Forest& forest, std::vector<Edge>& edges, const double& k)
             if (e.weight <= threshold[a] && e.weight <= threshold[b]) {
                 forest.join(a, b);
                 a = forest.find(a);
-                threshold[a] = e.weight + k / forest.nodeSize(a);
+                threshold[a] = e.weight + k/forest.nodeSize(a);
             }
         }
     }
@@ -119,7 +82,7 @@ void joinSmallComponents(Forest& forest, std::vector<Edge>& edges)
 
 double randNum()
 {
-    return ((double) rand() / (RAND_MAX));
+    return ((double)rand() / (RAND_MAX));
 }
 
 void assignColors(Image& image, Forest& forest)
@@ -133,7 +96,7 @@ void assignColors(Image& image, Forest& forest)
     
     for (int j = 0; j < h; j++) {
         for (int i = 0; i < w; i++) {
-            int index = forest.find(j * w + i);
+            int index = forest.find(j*w+i);
             image.pixelColor(i, j, colors[index]);
         }
     }
